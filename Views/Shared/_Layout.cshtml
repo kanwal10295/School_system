@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Allama Iqbal High School</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="format-detection" content="telephone=no" />
+        @*<link rel="icon" href="../Content/images/favicon.ico" type="image/x-icon">*@
+        <title>Allama Iqbal High School</title>
+
+        <!-- Bootstrap -->
+        <link href="~/content/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Links -->
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href="~/contet/css/font-awesome.css" rel="stylesheet">
+        <link href="~/content/css/material-design.css" rel="stylesheet">
+
+        <!--JS-->
+        <script src="~/script/js/jquery.js"></script>
+        <script src="~/script/js/jquery-migrate-1.2.1.min.js"></script>
+
+        <!--[if lt IE 9]>
+        <div style=' clear: both; text-align:center; position: relative;'>
+            <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+                <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+                     alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+            </a>
+        </div>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        <script src='~/script/js/device.min.js'></script>
+    </head>
+    <body>
+        <div class="page">
+            <!--========================================================
+                                      HEADER
+            =========================================================-->
+            <header class="parallax text-center" data-url="~/content/images/parallax1.jpg" data-mobile="true" data-color="#dee7eb" data-speed="3">
+                <section class="well">
+
+                    <div id="stuck_container" class="stuck_container">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-5 left-sm">
+
+                                    <!--address-->
+                                    <address>
+                                        <dl>
+                                            <dt><b>CALL US:</b></dt>
+                                            <dd>
+                                                @*<a href="callto:#">(0423) 123 1234</a>,*@
+                                                <a href="callto:#">(0423) 123 1235</a>
+                                            </dd>
+                                        </dl>
+                                    </address>
+                                    <!--address-->
+
+                                </div>
+                                <div class="col-md-6 col-sm-7 right-sm">
+
+                                    <!--address-->
+                                    <address>
+                                        <p> 15-A National Town Sanda Road lahore.</p>
+                                    </address>
+                                    <!--END address-->
+
+                                </div>
+                            </div>
+                            <nav class="navbar navbar-default navbar-static-top ">
+
+                                <div class="navbar-header">
+                                    <h1 class="navbar-brand">
+                                        <a href="./">
+                                            <span class="material-design-bookmark46"></span> Allama Iqbal High School
+
+                                        </a> <br> <br>
+                                    </h1>
+                                </div>
+
+                                <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
+                                    <li class="active">
+                                        <a href="../Home/index">Home</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="../Home/aboutus">About us</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">News</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Events</a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a href="#">History</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Testimonials</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Archive</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="../home/contact">Contacts</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    @*<li>
+                                        <a href="../Home/programs">Programs</a>
+                                    </li>*@
+                                    <li>
+                                        <a href="../Home/events">Events</a>
+                                    </li>
+
+                                    @*<li>
+                                        <a href="../Home/gallery">Gallery</a>
+                                    </li>*@
+
+                                    <li>
+                                        <a href="../Home/contact">Contacts</a>
+                                    </li>
+                                    @if (Session["adminId"] != null && Session["adminName"] != null)
+                                    {
+                                        <li>
+                                                @Html.ActionLink("Logout", "logout", "Home")
+                                        </li>
+                                         <li>
+                                                <a href="../Admin/AdminHomePage">SMS</a>
+                                         </li>
+                                        
+}
+                                    else
+                                    {
+                                        <li>
+                                            <a href="../Home/LogIn">LOG IN</a>
+                                        </li>
+                                    }
+                                </ul>
+
+                            </nav>
+
+                        </div>
+                    </div>
+                    
+                </section>
+            </header>
+
+</head>
+<body>
+    @RenderBody()
+
+
+    <footer>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="navbar-brand">
+                            <a href="./">
+                                <span class="material-design-bookmark46"></span> education
+                            </a>
+                        </h1>
+                        <div class="row flow-offset-3">
+                            <div class="col-sm-4 col-xs-4">
+                                <ul class="list text-uppercase">
+                                    <li><a class="active" href="/Home/index">HOME</a></li>
+                                    <li><a href="../Home/aboutus">ABOUT US</a></li>
+                                    @*<li><a href="../Home/programs">PROGRAMS</a></li>*@
+                                    <li><a href="../Home/events">EVENTS</a></li>
+                                    <li><a href="../Home/contact">CONTACTS</a></li>
+                                    <li><a href="../Home/login">LOG IN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="rights pull-left">
+                            &#169;Development Team <span id="copyright-year"></span> |
+                            <a href="../CV/in_CV">Kanwal Nayyer</a>
+                            <b> and </b>
+                            <a href="../CV/in_CV">Ammarah Yousaf</a>
+                        </p>
+                        @*<ul class="list-inline pull-right">
+                            <li><a class="icon material-design-blogger12" href="#"></a></li>
+                            <li><a class="icon material-design-facebook56" href="#"></a></li>
+                            <li><a class="icon material-design-twitter47" href="#"></a></li>
+                        </ul>*@
+
+                    </div>
+                    @*<div class="col-sm-6 inset-1">
+                        <div class="map">
+                            <div id="google-map" class="map_model"></div>
+                            <ul class="map_locations">
+                                <li data-x="-73.9874068" data-y="40.643180">
+                                    <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>*@
+                </div>
+                <!-- {%FOOTER_LINK} -->
+            </div>
+        </section>
+    </footer>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

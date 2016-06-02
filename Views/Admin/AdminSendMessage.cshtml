@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "AdminSendMessage";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@*============Middle Div about Send Messages*@
+
+@using EAD_project.Models;
+
+<div class="col-sm-6" style="margin:0px; padding:0px">
+
+    <div class="panel panel-danger" style="margin:80px 0px 0px 80px">
+
+        <div class="panel-heading">
+            <span><b>Compose Message</b></span>
+        </div>
+
+        <form action="/Admin/AdminSendMessageNow" class="form-horizontal" role="form">
+
+            <div class="panel-body">
+                @*<div class="form-group col-sm-12">
+                    <label class="control-label col-lg-2" style=" margin-top:8px; padding:0px; color:#204d74">Sender Id: </label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="receiver" id="receiver" onchange="check()" placeholder="Admin" required />
+                    </div>
+                    <p style="margin-top:8px; float:left; color:#a94442"><b id="message"></b></p>
+                </div>*@
+                <div class="form-group col-sm-12">
+                    <label class="control-label col-lg-2" style=" margin-top:8px; padding:0px; color:#204d74">Message: </label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" name="messageContent" placeholder="Write your Message here." required></textarea>
+                    </div>
+                </div>
+
+                <hr style="margin-left:5%; width:90%" />
+                <div class="col-lg-12">
+                    <input type="submit" value="Send Message" id="sendMessage" class="btn btn-danger col-lg-offset-4 col-sm-4" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@*<script>
+
+    function check() {
+        var receiver = $('#receiver').val();
+
+        $.getJSON("/Admin/AdminCheckReceiver?receiver=" + receiver, function (data) {
+            if (data) {
+                $('#sendMessage').attr('disabled', true);
+                $('#message').text("Receiver Not Exist!");
+            }
+            else {
+                $('#sendMessage').removeAttr('disabled');
+                $('#message').text("");
+            }
+        });
+    }
+
+</script>*@

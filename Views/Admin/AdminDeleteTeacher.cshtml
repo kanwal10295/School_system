@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "AdminDeleteTeacher";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@using EAD_project.Models;
+
+@*============Middle Div about Delete Students *@
+ 
+
+<div class="col-sm-5" style="margin:0px; padding:0px">
+
+    <div>
+        <h3 style="font-family:Georgia; margin-left:8px; color:#a94442"><b>Delete Teacher</b></h3>
+    </div>
+
+    <div class="panel panel-danger" style="margin: 80px 0px 0px 80px">
+ 
+        <table class="table">
+            
+            <tr style="background-color:#f2dede;">
+                <td style="text-align:center; color:#a94442"><b>Teacher ID</b></td>
+                <td style="text-align:center; color:#a94442"><b>Teacher Name</b></td>
+                <td style="text-align:center; color:#a94442"><b>Education</b></td>
+                <td style="text-align:center; color:#a94442"><b>Salary</b></td>
+                <td style="text-align:center; color:#a94442"><b>Operation</b></td>
+            </tr>
+
+        @foreach (teacher s in Model)
+        {
+                <tr>
+                    <td style="text-align:center">@s.teacher_id</td>
+                    <td style="text-align:center">@s.teacher_name</td>
+                    <td style="text-align:center">@s.education</td>
+                    <td style="text-align:center">@s.teacher_salary</td>
+                    <td style="text-align:center">
+                        <form action="/Admin/AdminDeleteTeacherNow/@s.teacher_id" onsubmit="return agree()">
+                            <input type="submit" value="Delete" id="confirm" style="border:none; border-radius:3px; color:white;font-weight:600" class="btn-warning"/>
+                        </form>
+
+                    </td>
+                </tr>
+        }
+            
+            @*@foreach (User s in Model)
+            {
+                if (s.type != "admin" &s.type != "student")
+                { 
+                    <tr>
+                        <td style="text-align:center">@s.name</td>
+                        <td style="text-align:center">@s.userId</td>
+                        <td style="text-align:center">
+                            <form action="/Admin/AdminDeleteTeacherNow/@s.userId" onsubmit="return agree()">
+                                <input type="submit" value="Delete" id="confirm" style="border:none; border-radius:3px; color:white;font-weight:600" class="btn-warning"/>
+                            </form>
+                            
+                        </td>
+                    </tr>
+                }
+            }*@    
+           
+        </table>
+    </div>
+
+</div>
+
+<script>
+
+    function agree() {
+        var x = confirm("Are you sure?");
+        if (x == true)
+            return true;
+        else
+            return false;
+    }
+
+</script>

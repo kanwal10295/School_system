@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title |Ammarah Yousaf and Kanwal Nayyer</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <Link href="~/Content/bootstrap.css" rel="stylesheet">
+    <Script src="~/Script/bootstrap.js"></Script>
+</head>
+
+@using EAD_project.Models;
+
+<body>
+    <div class="col-sm-12 table-bordered" style="margin:10px; padding-bottom:5px" >
+        
+        @*<div>
+            <img src="~/Content/images/CompleteBanner1.jpg"  width="1345" height="150" />
+        </div>*@
+        
+        <div class="well-sm col-sm-13 div-border" style="background-color:#74bebe">
+            <form action="../Admin/AdminHomePage" style="padding-left:200px">
+                 <input type="submit" value="Home" class="btn btn-danger col-sm-2"/>
+            </form>
+            <form action="../Home/index" style="padding-right: 20px; padding-left: 50px">
+                 <input type="submit" value="WebSite" class="btn btn-danger col-sm-2" />
+            </form>
+            @*<form action="../Home/programs">
+                <input type="date" value="Programs" class="btn btn-danger col-sm-2" />
+            </form>*@
+            
+            <form action="../Home/events" style="padding-right:20px ; padding-left:20px">
+                <input type="submit" value="Events" class="btn btn-danger col-sm-2" />
+            </form>
+            <form action="../Admin/AdminMessage" style="padding-right:20px ; padding-left:20px" >
+                <input type="submit" value="Announcement" class="btn btn-danger col-sm-2" />
+            </form>
+            @*<form action="../Home/aboutus">
+                <input type="submit" value="About Us" class="btn btn-danger col-sm-3"/>
+            </form>*@
+        </div>
+
+        @*============Left Div about Information *@
+
+        <div class="col-sm-3"  style="margin:0px; padding:0px; /*height:786px;*/ border-right:1px solid #003366">
+            
+            <div class="panel panel-danger" style="margin:8px 8px 0px 8px">
+                <div class="panel-heading">
+                    <span><b>Welcome !</b></span>
+                </div>
+                <div class="panel-body">
+                    <p>@Session["adminName"]</p>
+                    <p><a href="/Admin/AdminLogOut"><span class="glyphicon glyphicon-off">&nbsp;<b>Logout</b></span></a></p>
+                </div>
+            </div>
+
+            <div class="panel panel-danger" style="margin:8px 8px 0px 8px">
+                <div class="panel-heading">
+                    <span>Account Management</span>
+                </div>
+                <div class="panel-body">
+                    <p><a href="/Admin/AdminChangePassword">Change Password</a></p>
+                    <p><a href="/Admin/AdminUpdateProfile/@Session["adminId"]">Update Profile</a></p>
+                </div>
+            </div>
+                        
+            <div class="panel panel-danger" style="margin:8px 8px 0px 8px">
+                <div class="panel-heading">
+                    <span>Administration</span>
+                </div>
+                <div class="panel-body">
+                    <p><a href="/Admin/AdminAddTeacher">Add Teacher</a></p>
+                    <p><a href="/Admin/AdminDeleteTeacher">Delete Teacher</a></p>
+                    <p><a href="/Admin/AdminAddStudent">Add Student</a></p>
+                    <p><a href="/Admin/AdminDeleteStudent">Delete Student</a></p>
+                </div>
+            </div>
+            
+            <div class="panel panel-danger" style="margin:8px 8px 0px 8px">
+                <div class="panel-heading">
+                    <span>Record</span>
+                </div>
+                <div class="panel-body">
+                    <p><a href="/Admin/AdminViewAllStudents">View All Students</a></p>
+                    <p><a href="/Admin/AdminViewAllTeachers">View All Teachers</a></p>
+                </div>
+            </div>
+            
+            @*<div class="panel panel-danger" style="margin:8px 8px 0px 8px">
+                <div class="panel-heading">
+                    <span>Add / Remove</span>
+                </div>
+                <div class="panel-body">
+                    <p><a href="/Admin/AdminAddSubject">Add Subjects</a></p>
+                    <p><a href="/Admin/AdminDeleteSubject">Delete Subjects</a></p>
+                </div>
+            </div>*@
+
+        </div>
+        
+        @RenderBody()
+    
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

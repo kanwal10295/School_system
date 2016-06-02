@@ -1,0 +1,223 @@
+﻿@{
+    ViewBag.Title = "AdminAddTeacher";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@*============Middle Div about Update Profile *@
+
+<div class="col-sm-5" style="margin:0px; padding:0px">
+
+    <div class="panel panel-danger" style="margin: 80px 0px 0px 80px">
+                
+        <div class="panel-heading">
+            <span><b>Add New Teacher</b></span>
+        </div>
+                
+        <div class="panel-body">
+        <form action="/Admin/AdminAddTeacherNow" class="form-horizontal" role="form">
+            
+            <div class="form-group" >
+                <label class="control-label col-sm-3" for="adminID">Teacher ID: </label>
+
+                @*<div class="input-group" style="width:47%; float:left">*@
+                @*<div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_id" id="teacher_id" placeholder="Enter ID" required  />
+                </div>*@@*<br /><br /><br />*@
+
+                    @*<span class="input-group-btn"style="width:7%; margin-left:15px">
+                <input  type="button" value="Check!" id="check" class="btn btn-default" />
+            </span>
+
+            </div>
+            <label class="control-label col-sm-3" id="message" style="color:#a94442"></label>
+
+            <div class="col-sm-6" style="margin-left:28%; padding:0px" >
+                <label class="" id="Length" style="padding-bottom:5px; margin:0px; color:#a94442"></label>
+            </div>*@
+                </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Name: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_name" id="teacher_name"  placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            @*<div class="form-group" style="margin-bottom:0px">
+                <label class="control-label col-sm-3" for="adminID">Password </label>
+
+                <div class="input-group" style="width:47%; float:left">
+                    <input type="password" name="password" id="password" placeholder="Enter pwd" required class="form-control" style="width:92%; margin-left:15px" />
+
+                    <span class="input-group-btn" style="width:7%; margin-left:15px">
+                        <input type="button" value="Check!" id="check" class="btn btn-default" />
+                    </span>
+
+                </div>
+                <label class="control-label col-sm-3" id="message" style="color:#a94442"></label>
+
+                <div class="col-sm-6" style="margin-left:28%; padding:0px">
+                    <label class="" id="Length" style="padding-bottom:5px; margin:0px; color:#a94442"></label>
+                </div>
+            </div>*@
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Date of Birth: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Gender: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="gender" id="gender" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Education: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="education" id="education" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            @*<div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Date of Birth: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="dateOfBirth" id="dateOfBirth"  placeholder="Enter Name" required />
+                </div>
+            </div>*@
+            
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">joining_date: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_joining_date" id="teacher_joining_date" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Salary: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_salary" id="teacher_joining_date" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Contact #: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_Contact" id="teacher_joining_date" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Address: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_address" id="teacher_joining_date" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Email: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="teacher_email" id="teacher_joining_date" placeholder="Enter Name" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="adminName">Admin_id: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="userId" id="userId" placeholder="Enter Name" required />
+                </div>
+            </div>
+            @*<div class="form-group">
+                <label class="control-label col-sm-3" for="phone">Phone: </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="phone" placeholder="Enter Phone Number" required />
+                </div>
+            </div>*@
+
+            <div class="form-group">
+                <div>
+                    <input type="submit" value="Submit" id="done" class="btn btn-danger" style="margin-left:28.2%; width:43%" />
+                </div>
+            </div>
+
+        </form>
+   </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@*<script>
+
+    $(document).ready(function () {
+
+        $('#check').click(function () {
+
+            var userId = $('#teacher_id').val();
+            var testString = /^[0-9a-zA-Z]{5,15}$/;
+
+            if (userId.match(testString)) {
+                $('#Length').text("");
+                $.getJSON("/Admin/CheckUserName?userId=" + userId, function (data) {
+                    if (data || $('userId').val == "") {
+                        $('#done').attr('disabled', true);
+                        $('#message').text("Not Available");
+                    }
+                    else {
+                        $('#done').removeAttr('disabled');
+                        $('#message').text("Available");
+                    }
+                });
+            }
+            else {
+                if (userId.length < 1 || userId.length > 10) {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("1 to 10 characters required!");
+                    $('#message').text("");
+                }
+                else {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("Only alphabets and digits allowed!");
+                    $('#message').text("");
+                }
+            }
+        });
+
+
+        $('#teacher_id').change(function () {
+
+            var userId = $('#teacher_id').val();
+            var testString = /^[0-9a-zA-Z]{5,15}$/;
+
+            if (userId.match(testString)) {
+                $('#Length').text("");
+                $.getJSON("/Admin/CheckUserName?userId=" + userId, function (data) {
+                    if (data || $('userId').val == "") {
+                        $('#done').attr('disabled', true);
+                        $('#message').text("Not Available");
+                    }
+                    else {
+                        $('#done').removeAttr('disabled');
+                        $('#message').text("Available");
+                    }
+                });
+            }
+            else {
+                if (userId.length < 1 || userId.length > 10) {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("1 to 10 characters required!");
+                    $('#message').text("");
+                }
+                else {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("Only alphabets and digits allowed!");
+                    $('#message').text("");
+                }
+            }
+
+        });
+
+    });
+</script>*@

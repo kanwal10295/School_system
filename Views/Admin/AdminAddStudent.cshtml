@@ -1,0 +1,219 @@
+﻿@{
+    ViewBag.Title = "AdminAddStudent";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+@*============Middle Div about Add Students *@
+
+<div class="col-sm-5" style="margin:0px; padding:0px">
+
+    <div class="panel panel-danger" style="margin:80px 0px 0px 80px">
+
+        <div class="panel-heading">
+            <span><b>Add Student</b></span>
+        </div>
+
+        <div class="panel-body">
+            <br />
+            <form action="/Admin/AdminAddStudentNow" class="form-horizontal" role="form">
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Roll #: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="student_id" placeholder="Roll number" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Student Name: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="student_name" placeholder="Enter Name" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Father Name: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="father_name" placeholder="Enter Father Name" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Date Of Birth: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="dateOfBirth" placeholder="Enter Date Of Birth" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Phone: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="phone" placeholder="Enter Phone" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Gender: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="gender" placeholder="Enter Gender" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Address: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="address" placeholder="Enter Address" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Fee: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="fee" placeholder="Enter fee" required />
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Class: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="class1" placeholder="Enter Class" required />
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Section: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="section" placeholder="Enter Section" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Batch: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="batch" placeholder="Enter Batch" required />
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Remarks: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="name" placeholder="Enter Remarks" required />
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="studentName">Admin Id: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="admin_id" placeholder="Admin Id" required />
+                    </div>
+                </div>
+
+                @*<div class="form-group" style="margin-bottom:0px">
+                    <label class="control-label col-sm-3" for="studentID">Student ID: </label>
+
+                    <div class="input-group" style="width:47%; float:left">
+                        <input type="text" name="userId" id="userId" placeholder="Enter ID" required class="form-control" style="width:92%; margin-left:15px" />
+
+                        <span class="input-group-btn" style="width:7%; margin-left:15px">
+                            <input type="button" value="Check!" id="check" class="btn btn-default" />
+                        </span>
+
+                    </div>
+                    <label class="control-label col-sm-3" id="message" style="color:#a94442"></label>
+
+                    <div class="col-sm-6" style="margin-left:28%; padding:0px">
+                        <label class="" id="Length" style="padding-bottom:5px; margin:0px; color:#a94442"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3" for="phone">Phone: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="phone" placeholder="Enter Phone Number" required />
+                    </div>
+                </div>*@
+
+                <div class="form-group">
+                    <div>
+                        <input type="submit" value="Submit" id="done" class="btn btn-danger" style="margin-left:28.2%; width:43%" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@*<script>
+
+    $(document).ready(function () {
+
+        $('#check').click(function () {
+
+            var userId = $('#userId').val();
+            var testString = /^[0-9a-zA-Z]{5,15}$/;
+
+            if (userId.match(testString)) {
+                $('#Length').text("");
+                $.getJSON("/Admin/CheckUserName?userId=" + userId, function (data) {
+                    if (data || $('userId').val == "") {
+                        $('#done').attr('disabled', true);
+                        $('#message').text("Not Available");
+                    }
+                    else {
+                        $('#done').removeAttr('disabled');
+                        $('#message').text("Available");
+                    }
+                });
+            }
+            else {
+                if (userId.length < 5 || userId.length > 15) {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("5 to 15 characters required!");
+                    $('#message').text("");
+                }
+                else {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("Only alphabets and digits allowed!");
+                    $('#message').text("");
+                }
+            }
+        });
+
+
+        $('#userId').change(function () {
+
+            var userId = $('#userId').val();
+            var testString = /^[0-9a-zA-Z]{5,15}$/;
+
+            if (userId.match(testString)) {
+                $('#Length').text("");
+                $.getJSON("/Admin/CheckUserName?userId=" + userId, function (data) {
+                    if (data || $('userId').val == "") {
+                        $('#done').attr('disabled', true);
+                        $('#message').text("Not Available");
+                    }
+                    else {
+                        $('#done').removeAttr('disabled');
+                        $('#message').text("Available");
+                    }
+                });
+            }
+            else {
+                if (userId.length < 5 || userId.length > 15) {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("5 to 15 characters required!");
+                    $('#message').text("");
+                }
+                else {
+                    $('#done').attr('disabled', true);
+                    $('#Length').text("Only alphabets and digits allowed!");
+                    $('#message').text("");
+                }
+            }
+
+        });
+
+    });
+</script>*@

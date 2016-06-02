@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+    <title> SMS | School Management System </title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+</head>
+<body  >
+    <div class="container">
+
+        <div class="logo">
+            @*<img src="~/Pics/logo.jpg" style="width:500px" />*@
+        </div>
+
+        <div class="design-1">
+            <div class="left-design-1"></div>
+            <div class="right-design-1">
+                @*<img src="~/Pics/bar.png" />*@
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="left-content">
+                <br />
+                <p>LoginID:</p>
+                <p>Password:</p>
+                <br /><br /><br /><br />
+            </div>
+
+            <div class="right-content">
+                <form action="/Home/Verification" role="form" method="post">
+                    <br />
+                    <p><input type="text" name="userId" style="width:73%" required autofocus /></p>
+                    <p><input type="password" name="password" style="width:73%" required /></p>
+                    <p style="width:20%"><input type="submit" value="Login" name="submit"></p>
+                    <p style="width:20%"><a href="../Home/index"><input type="button" value="Back"></p></a>
+                </form>
+
+
+                <br /><br /><br /><br /><br /><br />
+            </div>
+        </div>
+
+        <div class="design-2">
+            <div class="left-design-2">
+                <p>Development Team</p>
+            </div>
+            <div class="right-design-2">
+                <p><a href="/Home/index">SMS (Ammarah Yousaf and Kanwal Nayyer)</a></p>
+            </div>
+        </div>
+
+        <div class="note">
+            <h1>IMPORTANT</h1>
+
+            <p>
+                The system only allows one login of each username at one time. therfore, <br />
+                you may experience disruption in your demo as other people login to the system.
+                If the system says you don't have permission to do something, this may be because
+                you have been loged out as someone else logs in with same username.
+            </p>
+            <br />
+        </div>
+    </div>
+
+</body>
+</html>
